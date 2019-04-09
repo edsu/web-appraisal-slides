@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>working with and reading against web archives</title>
+    <meta name="description" content="Web Archiving">
+    <meta name="author" content="Ed Summers">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <style>
+      a {
+        text-decoration: none;
+      }
+      .reveal figcaption {
+        font-size: 14pt;
+      }
+      .citations {
+        text-align: left;
+        font-size: 14pt;
+      }
+      .reveal sup { 
+        font-size: 14pt;
+        vertical-align: super;
+      }
+    </style>
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section class="title">
+          <div>
+            <h2>Archival Appraisal<br>and the Web</h2>
+          <br>
+          <p style="font-size: smaller;">
+            Ed Summers<br>
+            edsu@umd.edu<br>
+            <br>
+            <a href="http://mith.umd.edu"><img style="border: thin inset black;" src="images/mith.png"></a>
+          </p>
+        </section>
+
+        <section>
+          <img src="images/archives.jpg">
+        </section>
+
+        <section>
+          <img src="images/servers.jpg">
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section>
+          <figure>
+            <a href="images/sitemap.jpg"><img style="border: thin inset black;" src="images/sitemap.jpg"></a>
+            <figcaption><a href="https://blogs.city.ac.uk/sheinholtz-inm452-2016/tag/wireframes/">Information Architecture Sitemap</a> by Amit Sheinholtz</figcaption>
+          </figure>
+        </section>
+
+        <section>
+            <figure>
+              <a href="images/campus-sitemap.jpg"><img style="border: thin inset black;" src="images/campus-sitemap.png"></a>
+              <figcaption><a href="https://www.jimdalglish-ia.com/information-architecture">Campus Sitemap</a> by Jim Dalglish</figcaption>
+            </figure>
+        </section>
+
+        <section>
+          <figure>
+            <a href="http://as2914.net/#/galaxy/ipv4?cx=-39&cy=-70&cz=10475&lx=0.0324&ly=-0.0390&lz=0.0019&lw=0.9987&ml=1000&s=1.75&l=1&v=2016-09-03"><img src="images/internet.png"></a>
+            <figcaption><a href="http://as2914.net/#/galaxy/ipv4?cx=-39&cy=-70&cz=10475&lx=0.0324&ly=-0.0390&lz=0.0019&lw=0.9987&ml=1000&s=1.75&l=1&v=2016-09-03">BGP Agencies in the IPv4 Default-free zone</a></figcaption>
+        </section>
+
+        <section>
+          <blockquote style="text-align: left;">
+          Algorithms need not be software: in the broadest sense, they are
+          encoded procedures for transforming input data into a desired
+          output, based on specified calculations. The procedures name both a
+          problem and the steps by which it should be solved. Instructions
+          for navigation may be considered an algorithm, or the mathematical
+          formulas required to predict the movement of a celestial body
+          across the sky.
+          <br>
+          <br>
+          Tarleton Gillespie (2014)
+          </blockquote>
+          <aside class="notes">
+            <ul>
+              <li>"A sociological analysis must not conceive of algorithms as abstract, technical achievements, but must unpack the warm human and institutional choices that lie behind these cold mechanisms."</li>
+              <li>algorithms are created by people in particular circumstances</li>
+              <li>algorithms use data collected for particular purposes</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <a href="http://algorithmsofoppression.com/"><img style="margin-right: 20px;" height="400" src="images/oppression.jpg"></a>
+          <a href="https://us.macmillan.com/books/9781250074317"><img style="margin-right: 20px;" height="400" src="images/automating.jpg"></a>
+          <a href="https://weaponsofmathdestructionbook.com/"><img height="400" src="images/weapons.jpg"></a>
+          <aside class="notes">
+            Black girls search brought up pornography, revealing a corporate logic that makes money from racism and sexism.
+          </aside>
+        </section>
+
+        <section>
+          <a href="https://dl.acm.org/citation.cfm?id=2998345"><img width="70%" src="images/poster.png"></a>
+        </section>
+
+        <section>
+          <img src="images/crawls.png">
+          <ul>
+            <li>Scoping and considerations of data budget are ongoing concerns.</li>
+            <li>In crawling, unforeseen issues are negotiated in unpredictable ways that require better documentation.</li>
+            <li>Decisions interact and evolve over time in a changing context.</li>
+          </ul>
+          <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/asi.24048">Maemura (2018)</a>
+        </section>
+
+        <section>
+          <a target="_blank" href="https://web.archive.org"><img width="70%" src="images/ia.png"></a>
+          <aside class="notes">
+            <ul data-markdown>
+              * Started in 1996 as a site where you can 
+                upload content, but they also collect 
+                content by crawling the web
+              * 30 petabytes 
+              * Archive-It: over 500 organizations
+            </ul>
+          </aside>
+        </section>
+
+        <section>
+          <a target="_new" href="30pb/"><img width="80%" src="images/hd.jpg"></a>
+        </section>
+
+        <section>
+            <a target="_blank" href="https://web.archive.org/web/20141107235403/https://blacklivesmatter.com/"><img width="47%" src="images/blm-01.png"></a>
+            <a target="_blank" href="https://blacklivesmatter.com"><img width="47%" src="images/blm-02.png"></a>
+            <p>
+              blacklivesmatter.com<br>
+              Nov 7, 2014 vs Oct 22, 2018
+            </p>
+            <aside data-markdown class="notes">
+              * talk about change on the web (url stays the same, content
+              doesn't)
+              * 1/4 of all links break every 7 years (Ceglowski)
+              * 50% of links in Supreme Court decisions (Zittrain)
+            </aside>
+        </section>
+
+        <section data-background-image="images/envelope.jpg">
+          How much of the web was in the Internet Archive...in 2016?
+          <br>
+          <br>
+          <br>
+          510 billion captures / 130 trillion URLs = 0.39%
+          <br>
+          <br>
+          <br>
+          <p style="font-size: 14pt; text-align: left; margin-left: 15%; margin-right: 15%;">
+          1. Goel, V. (2016). <a href="https://blog.archive.org/2016/10/23/defining-web-pages-web-sites-and-web-captures/">Defining Web pages, Web sites and Web captures</a>. Internet Archive.<br>
+          2. Schwartz, B. (2016). <a href="https://searchengineland.com/googles-search-indexes-hits-130-trillion-pages-documents-263378">Google’s search knows about over 130 trillion pages.</a> Search Engine Land.
+          </p>
+        </section>
+
+        <section>
+          <a href="https://archive-it.org/organizations/408?q=collins&fc=websiteGroup%3A%23feartheturtle&show=Sites&fc=websiteGroup%3A%23feartheturtle"><img width="75%" src="images/collins.png"></a>
+        </section>
+
+        <section>
+          <h1>Demos ! 💥⚡️💻</h1>
+        </section>
+
+        <section>
+          <a href="https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak"><img style="border: thin solid #ccc" width="75%" src="images/extension.png"></a>
+        </section>
+
+        <section data-markdown>
+          # Wayback Exercise
+          ---
+
+          1. *Install* the Wayback browser extension ([Chrome](https://chrome.google.com/webstore/detail/wayback-machine/fpnmgdkabkmnadcjpehmlllkndpkmiak)/[Firefox](https://addons.mozilla.org/en-US/firefox/addon/wayback-machine_new/))
+          2. *Browse* the web!
+          3. See if a page is in the Internet Archive. *When* was it 
+             archived? *What* did it look like before?
+          4. Try to find a page that *isn't* in the archive. See if you can use 
+             the browser extension to *save* it. Think about why it *wasn't* in 
+             the archive already.
+
+        </section>
+
+
+
+        <section>
+          <a target="_blank" href="http://www.newblackmaninexile.net/">
+            <img style="border: thin solid #ccc" class="plain" src="images/newblackmaninexile.png">
+          </a>
+          <aside class="notes" data-markdown>
+            Mark Anthony Neal, Prof African American Studies at Duke
+          </aside>
+        </section>
+
+        <section>
+          <img width="80%" src="images/webrecorder.png">
+        </section>
+
+        <section>
+          <a href="https://github.com/webrecorder/webrecorderplayer-electron/releases/tag/v1.5.0"><img width="80%" src="images/webrecorder-player.png"></a>
+        </section>
+
+        <section data-markdown>
+          # Webrecorder Exercise
+          ---
+          1. Go to [https://webrecorder.io](https://webrecorder.io) and
+          (optionally) create an account.
+          2. Paste http://www.newblackmaninexile.net/ into the box to start
+          *archiving* it.
+          3. Archive more content by *interacting* with the website.
+          4. *Stop* recording and *Download* your collection.
+          5. Install [WebrecorderPlayer](https://github.com/webrecorder/webrecorderplayer-electron/releases/tag/v1.5.0).
+          6. *Disconnect* from Wi-Fi!
+          7. *Open* your webarchive in WebrecorderPlayer.
+          
+          *Bonus: see if you figure out how annotation works.*
+
+        </section>
+
+        <section>
+          <h1>Questions?</h1>
+          <hr>
+          <ul>
+            <li class="fragment">How was what you collected affected by your decisions?</li>
+            <li class="fragment">What should you think about when deciding to
+              make a collection public?</li>
+            <li class="fragment">Why is it important for people (not just
+              automated bots) to help archive the web?</li>
+            <li class="fragment">How do the tools (Wayback, Webrecorder) shape
+              the types of archives you can build?</li>
+          </ul>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: false,
+        history: true,
+        center: true,
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
